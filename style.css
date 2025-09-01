@@ -12,23 +12,26 @@ h1 {
 }
 
 .btn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
 #container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 800px;
-  height: 800px;
-  border: 1px solid black;
+  width: 960px;
+  height: 960px;
+  border: 1px solid rgb(143, 143, 143);
   border-radius: 10px;
   padding: 15px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
 .square {
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  /* border: 1px solid white; */
-  outline: 1px solid white;
+  background-color: #ededed;
 }
