@@ -22,9 +22,13 @@ function createGrid(number) {
     div.classList.add('square');
 
     div.addEventListener('mouseover', () => {
-      div.style.backgroundColor = 'black';
+      div.style.backgroundColor = `${randomRGB()}`;
     });
 
     container.appendChild(div);
   }
+}
+
+function randomRGB() {
+  return `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
 }
