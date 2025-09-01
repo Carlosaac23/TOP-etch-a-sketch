@@ -1,24 +1,30 @@
 const container = document.getElementById('container');
 
-function main() {}
-
-function createGrid() {
-  const grid = parseInt(prompt('Set your grid size (Max. 100px)'));
-
-  if (grid > 100) return alert('You should enter a value below 100');
-
-  for (let i = 0; i < grid; i++) {
-    for (let i = 0; i < grid; i++) {
-      const div = document.createElement('div');
-      div.classList.add('square');
-
-      div.addEventListener('mouseover', () => {
-        div.style.backgroundColor = '#ededed';
-      });
-
-      container.appendChild(div);
-    }
-  }
+function userPrompt() {
+  const gridNumber = parseInt(prompt('Set your grid size (Max. 100px)'));
+  createGrid(gridNumber);
 }
 
-main();
+function createGrid(number) {
+  if (number > 100) return alert('You should enter a value below 100');
+
+  // reset the grid
+  container.innerHTML = '';
+
+  // render div container
+  container.style.display = 'grid';
+
+  container.style.gridTemplateColumns = `repeat(${number}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${number}, 1fr)`;
+
+  for (let i = 0; i < number * number; i++) {
+    const div = document.createElement('div');
+    div.classList.add('square');
+
+    div.addEventListener('mouseover', () => {
+      div.style.backgroundColor = 'black';
+    });
+
+    container.appendChild(div);
+  }
+}
